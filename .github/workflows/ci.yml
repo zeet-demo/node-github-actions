@@ -25,11 +25,11 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: zeetco/node-github-action:latest
+          tags: zeetco/node-github-actions:latest
 
       - name: Zeet Deploy
-        uses: zeet-co/zeet-deploy-action@v0.0.1
+        uses: zeet-co/zeet-deploy-action@v1.0.0
         with:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
           project_id: ${{ secrets.ZEET_PROJECT_ID }}
-          image: zeetco/node-github-action:latest
+          image: zeetco/node-github-actions:latest
