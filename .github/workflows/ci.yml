@@ -28,7 +28,7 @@ jobs:
           tags: zeetco/node-github-actions:latest
 
       - name: Zeet Deploy
-        uses: zeet-co/zeet-deploy-action@v1.0.0
+        uses: zeet-co/zeet-deploy-action@v0.0.2
         with:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
           project_id: ${{ secrets.ZEET_PROJECT_ID }}
