@@ -27,6 +27,7 @@ jobs:
           project_id: a83b6e43-f8a9-42b2-8ed3-9e7c4ae8479b
           command: ls -al
           build: true
+          wait: true
 
       - name: Build and push
         id: docker_build
