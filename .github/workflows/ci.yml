@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
     
       - name: Zeet Run
-        uses: zeet-co/zeet-run-action@v0.0.2
+        uses: zeet-co/zeet-run-action@v1
         with:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
           project_id: a83b6e43-f8a9-42b2-8ed3-9e7c4ae8479b
@@ -36,7 +36,7 @@ jobs:
           tags: zeetco/node-github-actions:latest
 
       - name: Zeet Deploy
-        uses: zeet-co/zeet-deploy-action@v0.0.2
+        uses: zeet-co/zeet-deploy-action@v1
         with:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
           project_id: a83b6e43-f8a9-42b2-8ed3-9e7c4ae8479b
