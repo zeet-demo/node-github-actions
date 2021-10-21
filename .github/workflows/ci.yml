@@ -40,5 +40,6 @@ jobs:
         uses: zeet-co/zeet-deploy-action@v1
         with:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
-          project_id: a83b6e43-f8a9-42b2-8ed3-9e7c4ae8479b
+          project: zeet-demo/zeet-demo-node-actions
           image: zeetco/node-github-actions:latest
+          wait: true
