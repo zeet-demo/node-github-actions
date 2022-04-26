@@ -34,13 +34,13 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: zeetco/node-github-actions:latest
+          tags: zeetco/node-github-actions:${{ github.sha }}
 
       - name: Zeet Deploy
         uses: zeet-co/zeet-deploy-action@v1
         with:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
           project: zeet-demo/zeet-demo-node-actions
-          image: zeetco/node-github-actions:latest
+          image: zeetco/node-github-actions:${{ github.sha }}
           branch: ${{ github.ref_name }}
           wait: true
