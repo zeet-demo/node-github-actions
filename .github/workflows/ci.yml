@@ -2,7 +2,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, dev ]
 
 jobs:
   build:
@@ -42,4 +42,5 @@ jobs:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
           project: zeet-demo/zeet-demo-node-actions
           image: zeetco/node-github-actions:latest
+          branch: ${{ github.ref_name }}
           wait: true
