@@ -37,7 +37,7 @@ jobs:
           tags: zeetco/node-github-actions:${{ github.sha }}
 
       - name: Zeet Deploy
-        uses: zeet-co/zeet-deploy-action@v1
+        uses: zeet-co/zeet-deploy-action@v2-dev
         with:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
           project: zeet-demo/zeet-demo-node-actions
