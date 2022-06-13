@@ -1,3 +1,3 @@
 # node-github-actions
 
-Using Zeet with Github Actions
+Using Zeet with Github Actions.
