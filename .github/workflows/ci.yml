@@ -20,14 +20,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
     
-#       - name: Zeet Run
-#         uses: zeet-co/zeet-run-action@v1
-#         with:
-#           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
-#           project: zeet-demo/zeet-demo-node-actions
-#           command: ls -al
-#           build: true
-#           wait: true
+      - name: Zeet Run
+        uses: zeet-co/zeet-run-action@v1
+        with:
+          deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
+          project: zeet-dev/zeet-demo-node-actions
+          command: ls -al
+          build: true
+          wait: true
 
       - name: Build and push
         id: docker_build
@@ -40,7 +40,7 @@ jobs:
         uses: zeet-co/zeet-deploy-action@v1
         with:
           deploy_key: ${{ secrets.ZEET_DEPLOY_KEY }}
-          project: zeet-demo/zeet-demo-node-actions
+          project: zeet-dev/zeet-demo-node-actions
           image: zeetco/node-github-actions:${{ github.sha }}
           branch: ${{ github.ref_name }}
           wait: false
